@@ -29,6 +29,7 @@ rolling-tx:
 // 控制层 
 
 @Controller
+
 public class DemoController {
 
     @Autowired
@@ -117,8 +118,6 @@ public class DemoServiceImpl implements DemoApiService {
 import net.ewant.rolling.transaction.TransactionRollbackHandlerSupport;
 
 import net.ewant.rolling.transaction.annotation.RollbackHandler;
-
-import net.linebase.rpc.entity.Student;
 
 @RollbackHandler
 
