@@ -155,9 +155,9 @@ public class DemoRollbackService extends TransactionRollbackHandlerSupport {
 
 8. 有@RollbackBy则在spring中查找有没有handlerType指定的处理类（没有则忽略，结束）
 
-9. 找到对应处理类后，查找类中有没有【与业务方法】【同名】【同参数类型】的回滚处理类（没有则忽略，结束）
+9. 找到对应处理类后，查找类中有没有【与业务方法】【同名】【同参数类型】的回滚处理方法（没有则忽略，结束）
 
-10. 执行回滚方法，Finnish！
+10. 执行回滚方法，Finish！
 
 #【使用注意事项】
 
