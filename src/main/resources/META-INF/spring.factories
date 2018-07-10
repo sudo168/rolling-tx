@@ -1,0 +1,2 @@
+org.springframework.context.ApplicationContextInitializer=\
+  net.ewant.rolling.support.spring.TransactionApplicationContextInitializer
