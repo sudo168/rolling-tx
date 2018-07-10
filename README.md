@@ -47,15 +47,23 @@ public class DemoController {
 // 服务层
 
 import com.alibaba.dubbo.config.annotation.Reference;
+
 import net.linebase.rpc.entity.PayableOrder;
+
 import net.linebase.rpc.service.DemoApiService;
+
 import net.linebase.service.DemoService;
+
 import org.springframework.stereotype.Service;
+
 import org.springframework.transaction.annotation.Transactional;
 
 @RollbackBy(handlerType = DemoRollbackService.class)
+
 @Transactional
+
 @Service
+
 public class DemoServiceImpl implements DemoService{
 
     @Reference
@@ -76,14 +84,21 @@ public class DemoServiceImpl implements DemoService{
 // 服务层
 
 import com.alibaba.dubbo.config.annotation.Service;
+
 import net.linebase.demo.dao.IntegralMapper;
+
 import net.linebase.rpc.service.DemoApiService;
+
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.transaction.annotation.Transactional;
 
 @RollbackBy(handlerType = DemoRollbackService.class)
+
 @Transactional
+
 @Service
+
 public class DemoServiceImpl implements DemoApiService {
 
     @Autowired
@@ -98,11 +113,15 @@ public class DemoServiceImpl implements DemoApiService {
 }
 
 // 补偿事务处理
+
 import net.ewant.rolling.transaction.TransactionRollbackHandlerSupport;
+
 import net.ewant.rolling.transaction.annotation.RollbackHandler;
+
 import net.linebase.rpc.entity.Student;
 
 @RollbackHandler
+
 public class DemoRollbackService extends TransactionRollbackHandlerSupport {
 
     @Autowired
