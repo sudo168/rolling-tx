@@ -2,7 +2,7 @@
 
 基于 TCC、2PC思想，使用zookeeper协调的分布式事务框架。
 
-支持 dubbo、restTemplate（springcloud系的feign、Ribbon）。thrift、grpc 待定
+支持 dubbo、restTemplate（springcloud系的feign）。thrift、grpc 待定
 
 配置简单、使用方便。
 
